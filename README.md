@@ -1,44 +1,23 @@
-🧾 Transcript Generator
+# 🧾 Transcript Generator
 
-A lightweight and efficient Transcript Generator service that generates readable transcripts from YouTube videos — built with simplicity and scalability in mind.
+A lightweight and efficient **Transcript Generator** service that generates readable transcripts from YouTube videos — built with simplicity and scalability in mind.
 
-🚀 Overview
+---
 
-This service allows users to generate and view transcripts from any YouTube video by simply sending its URL to the backend service.
+## 🚀 Overview
 
-⚙️ How It Works
+This service allows users to generate and view transcripts from any YouTube video by simply sending its **URL** to the backend service.
 
-The user sends a YouTube video URL to the service.
+---
 
-The request passes through a dedicated route that forwards the URL to the yt-dlp handler.
+## ⚙️ How It Works
 
-The handler processes the video and retrieves the transcript data.
+1. The user sends a **YouTube video URL** to the service.  
+2. The request passes through a **dedicated route** that forwards the URL to the **yt-dlp handler**.  
+3. The handler processes the video and retrieves the **transcript data**.  
+4. The generated transcript is then served on the **specified port**, ready to be displayed or consumed by other services.
 
-The generated transcript is then served on the specified port, ready to be displayed or consumed by other services.
+---
 
-🧠 Workflow Summary
-Client → /generate-transcript → yt-dlp Handler → Generate Transcript → Response on Port
+## 🧠 Workflow Summary
 
-🧩 Example Usage
-POST /generate-transcript
-{
-  "youtube_url": "https://www.youtube.com/watch?v=abcd1234"
-}
-
-
-Response:
-
-{
-  "video_id": "abcd1234",
-  "transcript": "Welcome to the video..."
-}
-
-🛠️ Tech Stack
-
-Node.js / Express — Backend server
-
-yt-dlp — Transcript and metadata handler
-
-REST API — Standardized communication layer
-
-JSON — Clean and consistent response format
